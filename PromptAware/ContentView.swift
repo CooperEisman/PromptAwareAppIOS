@@ -19,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(tasks) { task in
-                Text("Task at \(Task.dateAdded!, formatter: itemFormatter)")
+                Text("Task at \(task.dateAdded!, formatter: itemFormatter)")
             }
             .onDelete(perform: deleteItems)
         }
