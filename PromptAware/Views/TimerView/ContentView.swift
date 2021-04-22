@@ -18,19 +18,14 @@ struct ContentView: View {
 
     var body: some View {
         List {
+            Button(action: addItem) {
+                Label("Add Task", systemImage: "plus")
+            }
+            
             ForEach(tasks) { task in
                 Text("Task at \(task.dateAdded!, formatter: itemFormatter)")
             }
             .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Task", systemImage: "plus")
-            }
         }
     }
 

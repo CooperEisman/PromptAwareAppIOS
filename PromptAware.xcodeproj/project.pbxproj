@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		1E275334262E7052005B0668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E275333262E7052005B0668 /* Preview Assets.xcassets */; };
 		1E275336262E7052005B0668 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E275335262E7052005B0668 /* Persistence.swift */; };
 		1E275339262E7052005B0668 /* PromptAware.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E275337262E7052005B0668 /* PromptAware.xcdatamodeld */; };
+		1E78B3F026312C8D009744B6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78B3EF26312C8D009744B6 /* TimerView.swift */; };
+		1E78B3F426314298009744B6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78B3F326314298009744B6 /* HomeView.swift */; };
+		1E78B3F6263142AF009744B6 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78B3F5263142AF009744B6 /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1E275335262E7052005B0668 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1E275338262E7052005B0668 /* PromptAware.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PromptAware.xcdatamodel; sourceTree = "<group>"; };
 		1E27533A262E7052005B0668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E78B3EF26312C8D009744B6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		1E78B3F326314298009744B6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1E78B3F5263142AF009744B6 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				1E27532C262E7052005B0668 /* PromptAwareApp.swift */,
-				1E27532E262E7052005B0668 /* ContentView.swift */,
-				1E275330262E7052005B0668 /* Assets.xcassets */,
-				1E275335262E7052005B0668 /* Persistence.swift */,
+				1E78B3F126312C9A009744B6 /* Views */,
+				1E78B3F22631426F009744B6 /* Data Management */,
 				1E27533A262E7052005B0668 /* Info.plist */,
-				1E275337262E7052005B0668 /* PromptAware.xcdatamodeld */,
+				1E275330262E7052005B0668 /* Assets.xcassets */,
 				1E275332262E7052005B0668 /* Preview Content */,
 			);
 			path = PromptAware;
@@ -73,6 +78,42 @@
 				1E275333262E7052005B0668 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1E78B3F126312C9A009744B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E78B3F326314298009744B6 /* HomeView.swift */,
+				1E78B3F8263142C3009744B6 /* TimerView */,
+				1E78B3F7263142B8009744B6 /* TaskView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E78B3F22631426F009744B6 /* Data Management */ = {
+			isa = PBXGroup;
+			children = (
+				1E275335262E7052005B0668 /* Persistence.swift */,
+				1E275337262E7052005B0668 /* PromptAware.xcdatamodeld */,
+			);
+			path = "Data Management";
+			sourceTree = "<group>";
+		};
+		1E78B3F7263142B8009744B6 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				1E78B3F5263142AF009744B6 /* TaskView.swift */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		1E78B3F8263142C3009744B6 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				1E78B3EF26312C8D009744B6 /* TimerView.swift */,
+				1E27532E262E7052005B0668 /* ContentView.swift */,
+			);
+			path = TimerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +151,7 @@
 				};
 			};
 			buildConfigurationList = 1E275324262E7052005B0668 /* Build configuration list for PBXProject "PromptAware" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -144,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E78B3F026312C8D009744B6 /* TimerView.swift in Sources */,
+				1E78B3F6263142AF009744B6 /* TaskView.swift in Sources */,
 				1E275336262E7052005B0668 /* Persistence.swift in Sources */,
 				1E27532F262E7052005B0668 /* ContentView.swift in Sources */,
+				1E78B3F426314298009744B6 /* HomeView.swift in Sources */,
 				1E275339262E7052005B0668 /* PromptAware.xcdatamodeld in Sources */,
 				1E27532D262E7052005B0668 /* PromptAwareApp.swift in Sources */,
 			);
